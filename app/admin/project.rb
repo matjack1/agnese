@@ -1,10 +1,4 @@
 ActiveAdmin.register Project do
-  controller do
-    def permitted_params
-      params.permit project: [:title, :subtitle, :equipe, :description, :date, category_ids: []]
-    end
-  end
-
   form do |f|
     f.inputs "Details" do
       f.input :title
@@ -14,6 +8,10 @@ ActiveAdmin.register Project do
       f.input :date
       f.input :equipe
       f.input :description
+    end
+
+    f.inputs :gallery do
+      f.has_many_images :pictures
     end
 
     f.inputs "Categories" do

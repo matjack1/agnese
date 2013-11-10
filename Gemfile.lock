@@ -16,6 +16,30 @@ GIT
       ransack (~> 1.0)
       sass-rails
 
+GIT
+  remote: git://github.com/raedatoui/activeadmin-gallery.git
+  revision: 315ac859822a7e9d46cfe1716137e2d0443523f1
+  specs:
+    activeadmin-gallery (0.1.0)
+      activeadmin-dragonfly
+      activeadmin-extra
+      jquery-ui-rails
+
+GIT
+  remote: git://github.com/stefanoverna/activeadmin-dragonfly.git
+  revision: d39f4689c92b79d051bb079cd2a7d98359f00b83
+  specs:
+    activeadmin-dragonfly (0.0.2)
+      activeadmin
+      dragonfly
+
+GIT
+  remote: git://github.com/stefanoverna/activeadmin-extra.git
+  revision: dfd89d02d8de9aa2c478114ad3e05e6ddb87287d
+  specs:
+    activeadmin-extra (0.1.0)
+      activeadmin
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -65,6 +89,9 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dragonfly (0.9.15)
+      multi_json (~> 1.0)
+      rack
     erubis (2.7.0)
     execjs (2.0.2)
     formtastic (2.3.0.rc2)
@@ -100,6 +127,8 @@ GEM
       activerecord (>= 3.0)
     polyglot (0.3.3)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.1)
@@ -163,9 +192,13 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  activeadmin-dragonfly!
+  activeadmin-extra!
+  activeadmin-gallery!
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  rack-cache
   rails (= 4.0.1)
   sass-rails (~> 4.0.0)
   sdoc

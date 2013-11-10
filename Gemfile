@@ -45,4 +45,8 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin-gallery', github: 'raedatoui/activeadmin-gallery'
+gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'activeadmin-extra', github: 'stefanoverna/activeadmin-extra'
+gem 'rack-cache', :require => 'rack/cache'
 
