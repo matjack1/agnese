@@ -1,4 +1,4 @@
-Agnese2::Application.configure do
+Agnese::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -27,3 +27,4 @@ Agnese2::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 end
+

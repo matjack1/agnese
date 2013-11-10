@@ -1,4 +1,4 @@
-Agnese2::Application.routes.draw do
+Agnese::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
@@ -41,7 +41,7 @@ Agnese2::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
@@ -56,3 +56,4 @@ Agnese2::Application.routes.draw do
   #     resources :products
   #   end
 end
+

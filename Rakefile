@@ -3,4 +3,5 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Agnese2::Application.load_tasks
+Agnese::Application.load_tasks
+
