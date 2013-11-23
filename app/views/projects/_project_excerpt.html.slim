@@ -1,7 +1,8 @@
 .project style="#{project.background_image_style}"
-  .description
-    p= project.title
-    p= project.subtitle
-    p= project.date
-    p= project.equipe
+  = link_to project_path(project) do
+    .description
+      p= project.title
+      p= project.subtitle
+      p= project.date
+      p= project.equipe
 

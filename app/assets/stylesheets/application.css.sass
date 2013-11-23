@@ -52,16 +52,19 @@ nav
       border: 1px solid black
       height: 18em
       position: relative
+      a
+        height: 100%
+        display: block
       .description
         position: absolute
         bottom: 0
         background-color: rgba(0, 0, 0, 0.7)
         padding: 10px
-        width: 100%
+        @include fill-parent
         display: none
         p
           color: white
           margin: 0
-      &:hover > .description
+      &:hover > a .description
         display: block
 
