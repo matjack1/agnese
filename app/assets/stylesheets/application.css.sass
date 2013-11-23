@@ -1,0 +1,67 @@
+@import "normalize"
+@import "bourbon"
+@import "bitters/grid-settings"
+@import "neat"
+@import "bitters/bitters"
+
+body
+  @include outer-container
+
+header
+  @include span-columns(12)
+  h1
+    a
+      color: black
+      &:hover
+        color: black
+    p
+      font-size: 0.6em
+      line-height: 1em
+      color: lightgray
+
+nav
+  @include span-columns(12)
+  background: black
+  ul
+    @include span-columns(10)
+    @include shift(2)
+    li
+      @include inline-block
+      @include pad(5px 20px)
+      a
+        color: white
+        &:hover
+          color: lightgray
+
+.content
+  min-height: 500px
+  .presentation
+    @include span-columns(2)
+    @include pad()
+
+  .projects
+    @include span-columns(10)
+    @include reset-display
+    @include pad()
+    @include outer-container
+    position: relative
+
+    .project
+      @include span-columns(6)
+      @include omega(2n)
+      border: 1px solid black
+      height: 18em
+      position: relative
+      .description
+        position: absolute
+        bottom: 0
+        background-color: rgba(0, 0, 0, 0.7)
+        padding: 10px
+        width: 100%
+        display: none
+        p
+          color: white
+          margin: 0
+      &:hover > .description
+        display: block
+

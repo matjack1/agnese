@@ -1,0 +1,26 @@
+doctype html
+html
+head
+  title Agnese Accotto
+  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+  = javascript_include_tag "application", "data-turbolinks-track" => true
+  = csrf_meta_tags
+body
+  header
+    h1
+      = link_to root_path do
+        ' Agnese Accotto
+        p architetto
+
+  nav
+    = categories_navigation
+
+  section.content
+    section.presentation
+      ' Text - blah blah
+    section.projects
+      = yield
+
+  footer
+    ' Agnese Accotto architetto. P.IVA. 1234567890
+
