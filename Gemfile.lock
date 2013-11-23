@@ -17,6 +17,15 @@ GIT
       sass-rails
 
 GIT
+  remote: git://github.com/marcusg/activeadmin-globalize3.git
+  revision: c0aca28c2561f08b0360c248364263032a2c0b78
+  branch: rails4
+  specs:
+    activeadmin-globalize3 (0.0.2)
+      activeadmin
+      globalize (~> 4.0.0.alpha.2)
+
+GIT
   remote: git://github.com/raedatoui/activeadmin-gallery.git
   revision: 315ac859822a7e9d46cfe1716137e2d0443523f1
   specs:
@@ -96,6 +105,10 @@ GEM
     execjs (2.0.2)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
+    globalize (4.0.0.alpha.2)
+      activemodel (>= 4.0.0)
+      activerecord (>= 4.0.0)
+      paper_trail (~> 3.0.0.beta)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -126,6 +139,9 @@ GEM
       bourbon (>= 2.1)
       sass (>= 3.2)
     orm_adapter (0.4.0)
+    paper_trail (3.0.0.rc2)
+      activerecord (>= 3.0, < 5.0)
+      activesupport (>= 3.0, < 5.0)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.3)
@@ -209,6 +225,7 @@ DEPENDENCIES
   activeadmin-dragonfly!
   activeadmin-extra!
   activeadmin-gallery!
+  activeadmin-globalize3!
   bourbon
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)

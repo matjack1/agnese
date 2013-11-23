@@ -3,5 +3,7 @@ class Project < ActiveRecord::Base
   accepts_nested_attributes_for :categories
 
   has_many_images :pictures
+
+  active_admin_translates :title, :subtitle, :equipe, :description, :date
 end
 

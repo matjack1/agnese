@@ -1,3 +1,14 @@
 it:
   architetto: architetto
+  time:
+    formats:
+      long: abc
+
+  active_admin:
+    globalize3:
+      translations: "Translations"
+      language:
+        it: "Italian"
+        en: "English"
+        fr: "French"
 

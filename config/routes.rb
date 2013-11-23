@@ -1,13 +1,14 @@
 Agnese::Application.routes.draw do
-  scope "(:locale)", locale: /en|fr/ do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  scope "(:locale)", locale: /en|fr|it/ do
     resources :projects
   end
 
   root "projects#index"
   get '/:locale' => 'projects#index'
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

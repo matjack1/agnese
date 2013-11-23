@@ -1,3 +1,11 @@
 fr:
   architetto: architecte
 
+  active_admin:
+    globalize3:
+      translations: "Translations"
+      language:
+        it: "Italian"
+        en: "English"
+        fr: "French"
+

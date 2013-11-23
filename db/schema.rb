@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123200845) do
+ActiveRecord::Schema.define(version: 20131123215936) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -76,6 +76,32 @@ ActiveRecord::Schema.define(version: 20131123200845) do
     t.integer "category_id"
     t.integer "project_id"
   end
+
+  create_table "category_translations", force: true do |t|
+    t.integer  "category_id", null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  add_index "category_translations", ["category_id"], name: "index_category_translations_on_category_id"
+  add_index "category_translations", ["locale"], name: "index_category_translations_on_locale"
+
+  create_table "project_translations", force: true do |t|
+    t.integer  "project_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "equipe"
+    t.text     "description"
+    t.string   "date"
+  end
+
+  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale"
+  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id"
 
   create_table "projects", force: true do |t|
     t.string   "title",       null: false

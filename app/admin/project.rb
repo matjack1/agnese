@@ -1,13 +1,11 @@
 ActiveAdmin.register Project do
   form do |f|
-    f.inputs "Details" do
-      f.input :title
-      f.input :subtitle
-    end
-    f.inputs "Content" do
-      f.input :date
-      f.input :equipe
-      f.input :description
+    f.translated_inputs "Translated fields", switch_locale: true do |t|
+      t.input :title
+      t.input :subtitle
+      t.input :date
+      t.input :equipe
+      t.input :description
     end
 
     f.inputs :gallery do

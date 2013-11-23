@@ -7,6 +7,13 @@ head
   = csrf_meta_tags
 body
   header
+    .lang
+      = link_to "it", root_path(locale: :it)
+      |  | 
+      = link_to "en", root_path(locale: :en)
+      |  | 
+      = link_to "fr", root_path(locale: :fr)
+
     h1
       = link_to root_path do
         ' Agnese Accotto

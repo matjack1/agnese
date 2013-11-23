@@ -53,5 +53,6 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'activeadmin-gallery', github: 'raedatoui/activeadmin-gallery'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-extra', github: 'stefanoverna/activeadmin-extra'
-gem 'rack-cache', :require => 'rack/cache'
+gem 'rack-cache', require: 'rack/cache'
+gem "activeadmin-globalize3", github: 'marcusg/activeadmin-globalize3', branch: 'rails4'
 
