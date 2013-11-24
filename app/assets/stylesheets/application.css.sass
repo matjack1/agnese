@@ -9,6 +9,7 @@ body
 
 header
   @include span-columns(12)
+  position: relative
   h1
     a
       color: black
@@ -19,7 +20,11 @@ header
       line-height: 1em
       color: lightgray
   .lang
-    float: right
+    position: absolute
+    top: 1em
+    right: 1em
+    a
+      color: black
 
 nav
   @include span-columns(12)
@@ -29,14 +34,16 @@ nav
     @include shift(2)
     li
       @include inline-block
-      @include pad(5px 20px)
+      @include pad(5px 25px)
       a
         color: white
         &:hover
           color: lightgray
+      .active
+        color: lightgray
 
 .content
-  min-height: 500px
+  min-height: 30em
   .presentation
     @include span-columns(2)
     @include pad()
@@ -48,12 +55,14 @@ nav
     @include outer-container
     position: relative
 
-    .project
+    .project-excerpt
       @include span-columns(6)
       @include omega(2n)
       border: 1px solid black
       height: 18em
       position: relative
+      background-position: 50% 50%
+      background-repeat: no-repeat
       a
         height: 100%
         display: block
@@ -61,12 +70,22 @@ nav
         position: absolute
         bottom: 0
         background-color: rgba(0, 0, 0, 0.7)
-        padding: 10px
+        padding: 0.7em
         @include fill-parent
-        display: none
+        height: 2.7em
+        overflow: hidden
         p
           color: white
           margin: 0
+        .title
+          font-size: 1.2em
+          margin-bottom: 0.5em
       &:hover > a .description
-        display: block
+        height: auto
+
+  .project
+    .description
+      @include span-columns(3)
+    .gallery
+      @include span-columns(9)
 

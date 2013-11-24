@@ -1,5 +1,9 @@
 class ProjectPresenter < Showcase::Presenter
-  presents :project
+  include Showcase::Traits::LinkTo
+
+  link_to do |c|
+    c.url h.project_path(self)
+  end
 
   def background_image_style
     picture = object.pictures.first

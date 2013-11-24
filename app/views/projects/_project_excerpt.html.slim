@@ -1,7 +1,7 @@
-.project style="#{project.background_image_style}"
-  = link_to project_path(project) do
+.project-excerpt style="#{project.background_image_style}"
+  = project.link do
     .description
-      p= project.title
+      p.title= project.title
       p= project.subtitle
       p= project.date
       p= project.equipe
