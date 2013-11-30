@@ -5,6 +5,5 @@
     p= project.description
     p= project.date
   .gallery
-    - project.pictures.each do |picture|
-      = image_tag picture.image.thumb('100x100').url
+    = render_gallery_for project.pictures, original: 'image.url', thumbnail: 'image.thumb("300x300").url'
 

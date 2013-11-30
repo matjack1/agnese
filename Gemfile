@@ -25,6 +25,7 @@ gem 'slim-rails'
 gem 'bourbon'
 gem 'neat'
 gem 'showcase'
+gem 'hermitage'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

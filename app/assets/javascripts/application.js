@@ -11,6 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require hermitage
 //= require jquery_ujs
 //= require turbolinks
+//= require masonry
 //= require_tree .
+
+$(document).ready(function() {
+  $('.gallery ul').masonry({
+    columnWidth:300,
+    itemSelector: '.span4'
+  });
+});
+
