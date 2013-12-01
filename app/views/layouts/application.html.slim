@@ -9,7 +9,7 @@ body
   header
     h1
       = link_to root_path do
-        ' Agnese Accotto
+        = t 'agnese_accotto'
         p= t 'architetto'
 
     .lang
@@ -24,10 +24,10 @@ body
 
   section.content
     section.presentation
-      ' Text - blah blah
+      = t('sidebar').html_safe
     section.projects
       = yield
 
   footer
-    ' Agnese Accotto architetto. P.IVA. 1234567890
+    = t('footer').html_safe
 

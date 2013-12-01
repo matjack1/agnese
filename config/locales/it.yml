@@ -1,5 +1,8 @@
 it:
-  architetto: architetto
+  agnese_accotto: "Agnese Accotto"
+  architetto: "architetto"
+  sidebar: "test <p><strong>test2</strong></p>"
+  footer: "Agnese Accotto architetto. P.IVA. 1234567890"
   time:
     formats:
       long: abc
