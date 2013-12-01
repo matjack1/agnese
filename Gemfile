@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
-
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -26,6 +25,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'showcase'
 gem 'hermitage'
+gem 'copycopter_client', github: 'stefanoverna/copycopter-ruby-client'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -58,4 +58,14 @@ gem 'fog'
 gem 'activeadmin-extra', github: 'stefanoverna/activeadmin-extra'
 gem 'rack-cache', require: 'rack/cache'
 gem "activeadmin-globalize3", github: 'marcusg/activeadmin-globalize3', branch: 'rails4'
+
+group :staging, :production do
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'newrelic_rpm'
+end
+
+group :development do
+  gem 'sqlite3'
+end
 
