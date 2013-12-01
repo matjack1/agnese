@@ -42,7 +42,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
@@ -53,6 +53,8 @@ end
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'activeadmin-gallery', github: 'raedatoui/activeadmin-gallery'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'unf'
+gem 'fog'
 gem 'activeadmin-extra', github: 'stefanoverna/activeadmin-extra'
 gem 'rack-cache', require: 'rack/cache'
 gem "activeadmin-globalize3", github: 'marcusg/activeadmin-globalize3', branch: 'rails4'
