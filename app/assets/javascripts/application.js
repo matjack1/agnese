@@ -18,9 +18,6 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $('.gallery ul').masonry({
-    columnWidth:300,
-    itemSelector: '.span4'
-  });
+
 });
 

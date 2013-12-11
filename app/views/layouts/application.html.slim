@@ -1,33 +1,30 @@
 doctype html
 html
-head
-  title Agnese Accotto
-  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-  = javascript_include_tag "application", "data-turbolinks-track" => true
-  = csrf_meta_tags
-body
-  header
-    h1
-      = link_to root_path do
-        = t 'agnese_accotto'
-        p= t 'architetto'
+  head
+    title Agnese Accotto
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    header
+      h1
+        = link_to root_path do
+          = t 'agnese_accotto'
+          p= t 'architetto'
 
-    .lang
-      = link_to "it", root_path(locale: :it)
-      |  | 
-      = link_to "fr", root_path(locale: :fr)
-      |  | 
-      = link_to "en", root_path(locale: :en)
+      .lang
+        = link_to "it", root_path(locale: :it)
+        |  | 
+        = link_to "fr", root_path(locale: :fr)
+        |  | 
+        = link_to "en", root_path(locale: :en)
 
-  nav
-    = categories_navigation
+    nav
+      = categories_navigation
 
-  section.content
-    section.presentation
-      = t('sidebar').html_safe
-    section.projects
+    section.content
       = yield
 
-  footer
-    = t('footer').html_safe
+    footer
+      = t('footer').html_safe
 

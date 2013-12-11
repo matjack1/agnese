@@ -1,9 +1,9 @@
 .project
   .description
-    p= project.title
-    p= project.subtitle
+    h2= project.title
+    h4= project.subtitle
     p= project.description
     p= project.date
   .gallery
-    = render_gallery_for project.pictures, original: 'image.url', thumbnail: 'image.thumb("300x300").url'
+    = render_gallery_for project.pictures, original: 'image.url', thumbnail: 'image.thumb("300x300#").url', item_class: 'block'
 

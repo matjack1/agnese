@@ -1,3 +1,6 @@
-- projects = present_collection(@projects)
-= render collection: projects, partial: 'project_excerpt', as: :project
+section.presentation
+  = t('sidebar').html_safe
+section.projects
+  - projects = present_collection(@projects)
+  = render collection: projects, partial: 'project_excerpt', as: :project
 

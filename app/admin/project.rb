@@ -17,5 +17,10 @@ ActiveAdmin.register Project do
     end
     f.actions
   end
+
+  index do
+    column :title
+    actions
+  end
 end
 

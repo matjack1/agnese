@@ -43,6 +43,7 @@ nav
         color: lightgray
 
 .content
+  @include span-columns(12)
   min-height: 30em
   .presentation
     @include span-columns(2)
@@ -84,11 +85,13 @@ nav
         height: auto
 
   .project
+    padding: 10px
     .description
-      @include span-columns(3)
+      @include span-columns(5)
     .gallery
-      @include span-columns(9)
-      // li
-      //   @include span-columns(6)
-      //   @include omega(2n)
+      @include span-columns(7)
+      li
+        @include span-columns(6)
+        @include omega(2n)
+        margin: 4px
 
