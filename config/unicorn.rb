@@ -1,7 +1,7 @@
 # https://devcenter.heroku.com/articles/rails-unicorn
 
 worker_processes (ENV['WEB_CONCURRENCY'] || 3).to_i
-timeout (ENV['TIMEOUT_IN_SECONDS'] || 5).to_i
+timeout (ENV['TIMEOUT_IN_SECONDS'] || 30).to_i
 preload_app true
 
 before_fork do |server, worker|
