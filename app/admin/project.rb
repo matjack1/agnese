@@ -1,4 +1,6 @@
 ActiveAdmin.register Project do
+  sortable
+
   form do |f|
     f.translated_inputs "Translated fields", switch_locale: true do |t|
       t.input :title
@@ -18,8 +20,8 @@ ActiveAdmin.register Project do
     f.actions
   end
 
-  index do
-    column :title
+  index as: :sortable do
+    label :title
     actions
   end
 end

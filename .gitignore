@@ -17,4 +17,5 @@
 
 /public/system/
 .env
+bin
 

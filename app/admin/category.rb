@@ -1,7 +1,9 @@
 ActiveAdmin.register Category do
-  index do
-    column :name
-    default_actions
+  sortable
+
+  index as: :sortable do
+    label :name
+    actions
   end
 
   form do |f|

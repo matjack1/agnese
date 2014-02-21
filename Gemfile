@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -44,20 +44,15 @@ end
 # Use unicorn as the app server
 gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'activeadmin-gallery', github: 'raedatoui/activeadmin-gallery'
+gem 'activeadmin-gallery', github: 'stefanoverna/activeadmin-gallery'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
-gem 'unf'
-gem 'fog'
 gem 'activeadmin-extra', github: 'stefanoverna/activeadmin-extra'
-gem 'rack-cache', require: 'rack/cache'
-gem "activeadmin-globalize3", github: 'marcusg/activeadmin-globalize3', branch: 'rails4'
+gem 'activeadmin-globalize', github: 'stefanoverna/activeadmin-globalize'
+gem 'activeadmin-sortable-tree', github: 'nebirhos/activeadmin-sortable-tree'
+gem 'fog'
+gem 'unf'
+gem 'rack-cache'
 
 group :staging, :production do
   gem 'pg'
