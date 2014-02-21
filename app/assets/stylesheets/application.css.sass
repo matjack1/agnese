@@ -11,6 +11,7 @@ header
   @include span-columns(12)
   position: relative
   h1
+    font-size: 2.8em
     a
       color: black
       &:hover
@@ -79,8 +80,12 @@ nav
           color: white
           margin: 0
         .title
-          font-size: 1.2em
+          font-size: 1.3em
           margin-bottom: 0.5em
+          font-weight: 700
+        .equipe
+          line-height: 0.8em
+          font-size: 0.8em
       &:hover > a .description
         height: auto
 
@@ -94,4 +99,12 @@ nav
         @include span-columns(6)
         @include omega(2n)
         margin: 4px
+    .date
+      margin: 0.75em 0 0.5em
+    .equipe
+      line-height: 0.8em
+      font-size: 0.8em
+      margin-bottom: 2em
+    .text-description
+      text-align: justify
 

@@ -1,6 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+.home-title {
+  font-family: 'Playfair Display', serif;
+}
+
 body {
   color: $base-font-color;
-  font-family: $base-font-family;
+  font-family: 'Lato', $base-font-family;
+  font-weight: 300;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
@@ -101,3 +109,4 @@ cite {
     content: '\2014 \00A0';
   }
 }
+

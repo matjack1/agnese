@@ -2,8 +2,9 @@
   .description
     h2= project.title
     h4= project.subtitle
-    p= project.description
-    p= project.date
+    p.date= project.date
+    p.equipe= project.equipe
+    p.text-description== project.description
   .gallery
     = render_gallery_for project.pictures, original: 'image.url', thumbnail: 'image.thumb("300x300#").url', item_class: 'block'
 
