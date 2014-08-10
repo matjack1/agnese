@@ -4,9 +4,8 @@ ActiveAdmin.register Page do
       t.input :title
       t.input :content
       t.input :date
+      t.seo_meta_inputs
     end
-
-    f.seo_meta_inputs
 
     f.actions
   end

@@ -2,10 +2,12 @@ fr:
   architetto: architecte
 
   active_admin:
-    globalize3:
+    globalize:
       translations: "Translations"
       language:
-        it: "Italian"
-        en: "English"
-        fr: "French"
+        it: "Italien"
+        en: "Anglais"
+        fr: "Français"
+    seo_meta:
+      name: "SEO Meta attributes"
 

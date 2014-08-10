@@ -11,7 +11,7 @@ it:
     globalize3:
       translations: "Translations"
       language:
-        it: "Italian"
-        en: "English"
-        fr: "French"
+        it: "Italiano"
+        en: "Inglese"
+        fr: "Francese"
 
