@@ -4,6 +4,7 @@ Agnese::Application.routes.draw do
 
   scope "(:locale)", locale: /en|fr|it/ do
     resources :projects
+    resources :pages
   end
 
   root "projects#index"

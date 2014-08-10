@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221111502) do
+ActiveRecord::Schema.define(version: 20140720113451) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -47,6 +47,25 @@ ActiveRecord::Schema.define(version: 20140221111502) do
   end
 
   add_index "active_admin_gallery_images", ["imageable_id", "imageable_type", "imageable_relation"], name: "active_admin_gallery_images_imageable"
+
+  create_table "active_admin_seo_meta", force: true do |t|
+    t.string   "slug"
+    t.string   "title"
+    t.string   "description"
+    t.string   "keywords"
+    t.string   "og_title"
+    t.string   "og_type"
+    t.string   "og_image_uid"
+    t.string   "og_url"
+    t.integer  "seoable_id"
+    t.string   "seoable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "og_description"
+    t.string   "og_site_name"
+  end
+
+  add_index "active_admin_seo_meta", ["seoable_id", "seoable_type"], name: "active_admin_seo_meta_seoable"
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -87,6 +106,26 @@ ActiveRecord::Schema.define(version: 20140221111502) do
 
   add_index "category_translations", ["category_id"], name: "index_category_translations_on_category_id"
   add_index "category_translations", ["locale"], name: "index_category_translations_on_locale"
+
+  create_table "page_translations", force: true do |t|
+    t.integer  "page_id",    null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "content"
+    t.string   "date"
+  end
+
+  add_index "page_translations", ["locale"], name: "index_page_translations_on_locale"
+  add_index "page_translations", ["page_id"], name: "index_page_translations_on_page_id"
+
+  create_table "pages", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "project_translations", force: true do |t|
     t.integer  "project_id",  null: false

@@ -6,6 +6,7 @@
 
 body
   @include outer-container
+  padding: 0 flex-gutter()
 
 header
   @include span-columns(12)
@@ -30,9 +31,9 @@ header
 nav
   @include span-columns(12)
   background: black
+  margin-bottom: flex-gutter()
   ul
-    @include span-columns(10)
-    @include shift(2)
+    float: right
     li
       @include inline-block
       @include pad(5px 25px)
@@ -48,12 +49,10 @@ nav
   min-height: 30em
   .presentation
     @include span-columns(2)
-    @include pad()
 
   .projects
     @include span-columns(10)
     @include reset-display
-    @include pad()
     @include outer-container
     position: relative
 
@@ -62,6 +61,7 @@ nav
       @include omega(2n)
       border: 1px solid black
       height: 18em
+      margin-bottom: flex-gutter()
       position: relative
       background-position: 50% 50%
       background-repeat: no-repeat
@@ -90,7 +90,6 @@ nav
         height: auto
 
   .project
-    padding: 10px
     .description
       @include span-columns(5)
     .gallery
@@ -99,6 +98,9 @@ nav
         @include span-columns(6)
         @include omega(2n)
         margin: 4px
+        a
+          line-height: 0
+          display: block
     .date
       margin: 0.75em 0 0.5em
     .equipe

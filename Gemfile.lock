@@ -17,6 +17,16 @@ GIT
       sass-rails
 
 GIT
+  remote: git://github.com/nebirhos/activeadmin-seo.git
+  revision: 1bea51f6597211cae88d7558899b8db5ec1bbcaf
+  branch: master
+  specs:
+    activeadmin-seo (1.0.0)
+      activeadmin
+      activeadmin-dragonfly
+      friendly_id (~> 5.0.0)
+
+GIT
   remote: git://github.com/nebirhos/activeadmin-sortable-tree.git
   revision: d4f28e8d0700afa5646b8a7dbaaf89ac3b47383e
   specs:
@@ -132,6 +142,8 @@ GEM
     formatador (0.2.4)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     globalize (4.0.0)
       activemodel (>= 4.0.0, < 5)
       activerecord (>= 4.0.0, < 5)
@@ -276,6 +288,7 @@ DEPENDENCIES
   activeadmin-extra!
   activeadmin-gallery!
   activeadmin-globalize!
+  activeadmin-seo!
   activeadmin-sortable-tree!
   bourbon
   coffee-rails (~> 4.0.0)

@@ -8,7 +8,7 @@ class ProjectPresenter < Showcase::Presenter
   def background_image_style
     picture = object.pictures.first
     if picture
-      url = picture.image.thumb('414x286#').url
+      url = picture.image.thumb('439x286#').url
       "background-image: url(\"#{url}\")"
     end
   end

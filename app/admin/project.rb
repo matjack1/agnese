@@ -17,6 +17,9 @@ ActiveAdmin.register Project do
     f.inputs "Categories" do
       f.inputs :categories
     end
+
+    f.seo_meta_inputs
+
     f.actions
   end
 
