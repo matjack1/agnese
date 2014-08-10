@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Agnese Accotto
+    title = t 'agnese_accotto'
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -13,11 +13,11 @@ html
           p= t 'architetto'
 
       .lang
+        = link_to "en", root_path(locale: :en)
+        |  | 
         = link_to "it", root_path(locale: :it)
         |  | 
         = link_to "fr", root_path(locale: :fr)
-        |  | 
-        = link_to "en", root_path(locale: :en)
 
     nav
       = categories_navigation

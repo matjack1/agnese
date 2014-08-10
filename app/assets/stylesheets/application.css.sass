@@ -5,18 +5,23 @@
 @import "bitters/bitters"
 
 body
-  @include outer-container
+  +outer-container
   padding: 0 flex-gutter()
 
+a
+  color: black
+  text-decoration: underline
+  &:hover
+    color: gray
+
 header
-  @include span-columns(12)
+  +span-columns(12)
   position: relative
   h1
     font-size: 2.8em
     a
-      color: black
-      &:hover
-        color: black
+      text-decoration: none
+
     p
       font-size: 0.6em
       line-height: 1em
@@ -26,18 +31,23 @@ header
     top: 1em
     right: 1em
     a
-      color: black
+      text-decoration: none
+
+footer
+  +span-columns(12)
+  padding: 2em
 
 nav
-  @include span-columns(12)
+  +span-columns(12)
   background: black
   margin-bottom: flex-gutter()
   ul
     float: right
     li
-      @include inline-block
-      @include pad(5px 25px)
+      +inline-block
+      +pad(5px 25px)
       a
+        text-decoration: none
         color: white
         &:hover
           color: lightgray
@@ -45,20 +55,20 @@ nav
         color: lightgray
 
 .content
-  @include span-columns(12)
+  +span-columns(12)
   min-height: 30em
   .presentation
-    @include span-columns(2)
+    +span-columns(2)
 
   .projects
-    @include span-columns(10)
-    @include reset-display
-    @include outer-container
+    +span-columns(10)
+    +reset-display
+    +outer-container
     position: relative
 
     .project-excerpt
-      @include span-columns(6)
-      @include omega(2n)
+      +span-columns(6)
+      +omega(2n)
       border: 1px solid black
       height: 18em
       margin-bottom: flex-gutter()
@@ -73,7 +83,7 @@ nav
         bottom: 0
         background-color: rgba(0, 0, 0, 0.7)
         padding: 0.7em
-        @include fill-parent
+        +fill-parent
         height: 2.7em
         overflow: hidden
         p
@@ -91,12 +101,12 @@ nav
 
   .project
     .description
-      @include span-columns(5)
+      +span-columns(5)
     .gallery
-      @include span-columns(7)
+      +span-columns(7)
       li
-        @include span-columns(6)
-        @include omega(2n)
+        +span-columns(6)
+        +omega(2n)
         margin: 4px
         a
           line-height: 0
@@ -109,4 +119,7 @@ nav
       margin-bottom: 2em
     .text-description
       text-align: justify
+
+  .page
+    +span-columns(10)
 

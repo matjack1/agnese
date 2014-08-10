@@ -3,6 +3,7 @@ it:
   architetto: "architetto"
   sidebar: "test <p><strong>test2</strong></p>"
   footer: "Agnese Accotto architetto. P.IVA. 1234567890"
+  all_projects: "Tutti i progetti"
   time:
     formats:
       long: abc
