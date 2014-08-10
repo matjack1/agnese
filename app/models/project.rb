@@ -3,8 +3,9 @@ class Project < ActiveRecord::Base
   accepts_nested_attributes_for :categories
 
   has_many_images :pictures
-  has_seo_meta :title
 
-  active_admin_translates :title, :subtitle, :equipe, :description, :date
+  active_admin_translates :title, :subtitle, :equipe, :description, :date do
+      has_seo_meta :title
+  end
 end
 

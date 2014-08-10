@@ -8,6 +8,8 @@ ActiveAdmin.register Project do
       t.input :date
       t.input :equipe
       t.input :description
+
+      t.seo_meta_inputs
     end
 
     f.inputs :gallery do
@@ -17,8 +19,6 @@ ActiveAdmin.register Project do
     f.inputs "Categories" do
       f.inputs :categories
     end
-
-    f.seo_meta_inputs
 
     f.actions
   end
