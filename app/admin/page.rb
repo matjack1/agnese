@@ -6,6 +6,8 @@ ActiveAdmin.register Page do
       t.input :date
     end
 
+    f.seo_meta_inputs
+
     f.actions
   end
 end
