@@ -9,7 +9,7 @@ class ProjectPresenter < Showcase::Presenter
     picture = object.pictures.first
     if picture
       url = picture.image.thumb('439x286#').url
-      "background-image: url(\"#{url}\")"
+      "background-image: url(\"#{h.asset_url(url)}\")"
     end
   end
 end

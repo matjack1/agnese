@@ -28,5 +28,14 @@ Agnese::Application.configure do
   config.assets.debug = true
 
   config.i18n.available_locales = [:en, :it, :fr]
+
+  config.action_controller.asset_host = ENV['CLOUDFRONT_URL']
+
+  config.middleware.use Rack::Cors do
+    allow do
+      origins '*'
+      resource '*', :headers => :any, :methods => [:get]
+    end
+  end
 end
 

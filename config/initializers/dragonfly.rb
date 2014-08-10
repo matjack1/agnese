@@ -9,3 +9,5 @@ app.datastore.configure do |c|
   c.secret_access_key = ENV['AWS_SECRET_KEY']
 end
 
+app.configure{|c| c.url_host = ENV['CLOUDFRONT_URL'] }
+

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.0'
+ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
@@ -45,15 +45,17 @@ end
 gem 'unicorn'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
 gem 'activeadmin-gallery', github: 'stefanoverna/activeadmin-gallery'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-extra', github: 'stefanoverna/activeadmin-extra'
 gem 'activeadmin-globalize', github: 'stefanoverna/activeadmin-globalize'
-gem 'activeadmin-sortable-tree', github: 'nebirhos/activeadmin-sortable-tree'
+gem 'activeadmin-sortable-tree', github: 'welaika/activeadmin-sortable-tree'
 gem 'activeadmin-seo', github: 'nebirhos/activeadmin-seo', branch: 'master'
 gem 'fog'
 gem 'unf'
 gem 'rack-cache'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :staging, :production do
   gem 'pg'

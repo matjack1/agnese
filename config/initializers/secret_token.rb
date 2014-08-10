@@ -9,5 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Agnese::Application.config.secret_key_base = 'e9b4ae787f05d6fcf425a0f6a28627f7fdb9184415ffc9c58e1a6af6e5a66bd8729c5f0bb32b56ae4f35703907f8922cb691768f7133c0996888410548e8bbb1'
+Agnese::Application.config.secret_key_base = ENV['SECRET_KEY']
 
