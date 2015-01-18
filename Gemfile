@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.9'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -46,7 +46,7 @@ gem 'unicorn'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
-gem 'activeadmin-gallery', github: 'stefanoverna/activeadmin-gallery'
+gem 'activeadmin-gallery', github: 'justonestep/activeadmin-gallery', branch: 'feature/rails-4.1.5'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-extra', github: 'stefanoverna/activeadmin-extra'
 gem 'activeadmin-globalize', github: 'stefanoverna/activeadmin-globalize'
