@@ -1,3 +1,5 @@
+activate :dotenv
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -42,3 +44,13 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+activate :dato,
+  token: ENV['DATO_READ_ONLY_TOKEN'],
+  base_url: ENV['SITE_URL']
+
+# feel free to use dato from now on:
+#
+# dato.articles.each do |article|
+#   proxy "/articles/#{article.slug}.html", "/templates/article.html", locals: { article: article }
+# end
