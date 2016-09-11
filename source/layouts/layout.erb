@@ -16,6 +16,9 @@
   </head>
 
   <body class="<%= page_classes %>">
+    <header>
+      <h1><%= dato.site_title.title %><span><%= dato.site_title.subtitle %></span></h1>
+    </header>
     <%= yield %>
   </body>
 </html>
